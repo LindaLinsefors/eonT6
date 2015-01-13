@@ -6,8 +6,36 @@
 
 
 <style>
-#previous {
+
+body {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+    background-color: #EDF0FF;
+    background-color: #E3F4FF;
+    background-color: #000000;
+    color: #FFFFFF
+}
+
+.dice {
+    border: 1px solid #98bf21;
+    padding: 3px 7px 2px 7px;
+    color: #000000;
+    background-color: #EAF2D3;
+}
+
+.six {
+    background-color: #FFFFFF;
+}
+
+#output3 {
+    color: #6D8A17;
+}
+
+b {
+    color: #6D8A17;
+}
+
+#previous {
     border-collapse: collapse;
 }
 
@@ -26,9 +54,14 @@
     color: #ffffff;
 }
 
-#previous tr.alt td {
+#previous tr.alt1 td {
     color: #000000;
     background-color: #EAF2D3;
+}
+
+#previous tr.alt2 td {
+    color: #000000;
+    background-color: #FFFFFF;
 }
 </style>
 
@@ -38,14 +71,14 @@
 
 function display_dice(this_roll){
   return (
-    ' <span class="dice six">' 
+    ' <span class="dice">' 
     + this_roll.toString()
-    + '<span>'
+    + '</span>'
   )
 };
 
 function display_6(){
-  return ' <span class="dice six"> 6 </span>'
+  return ' <span class="dice six">6</span>'
 };
 
 
@@ -152,9 +185,9 @@ function roll(){
     + previous_results;
  
     if (previous_results_count % 2){
-      var row_class = ' class="alt" '
+      var row_class = ' class="alt1" '
     }else{
-      var row_class = ''
+      var row_class = ' class="alt2" '
     }
     previous_results_count ++;
 
