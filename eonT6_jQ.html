@@ -104,8 +104,8 @@ function roll(){
     + '</b></p>'
   )
   if (num_of_t6 < 0){
-    $("#output2").html("You can't roll neggative dice");
-    $("#output3").html('');
+    $("#output2").html('');
+    $("#output3").html("I can't roll neggative dices for you");
     return
   }
   $("#output2").html('<table>');
@@ -138,8 +138,10 @@ function roll(){
 <div id="output1">
 </div>
 
-<div id="output2">
-</div>
+<table>
+  <div id="output2">
+  </div>
+</table>
 
 <div id="output3">
 </div>
