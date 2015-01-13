@@ -8,12 +8,14 @@ Jut download eonT6.html and open it with your favourite browser.
 You can enter ether numbers or equations as "Number of T6" and "Extra". If your your "Extra" is less then 0 or more than 3, this little program will re calculate the number of dices according to Eon rules.
 As an example, if you enter:
 
-Number of T6: 3+2,
+Number of T6: 3+2
+
 Extra: -1
 
 This will be recalculated to:
 
-Number of T6: 4,
+Number of T6: 4
+
 Extra: 3
 
 This program will always do ob-rolles acoring to Eon rules. This means that if the oucome of a dice is 6, this will not be counted, but instead two new dices arr rolled.
