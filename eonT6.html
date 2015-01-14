@@ -28,12 +28,8 @@ body {
     background-color: #FFFFFF;
 }
 
-#output3 {
-    color: #6D8A17;
-    color: #98bf21;
-}
 
-b {
+.green {
     color: #6D8A17;
     color: #98bf21;
 }
@@ -155,21 +151,23 @@ function roll(){
 
   num_of_t6 += Math.floor(extra/4);
   extra -= 4*Math.floor(extra/4);
+
   document.getElementById("output1").innerHTML = 
     '<p> ( '
     + document.getElementById("t6").value
     + ' ) T6 + ( '
     + document.getElementById("extra").value
-    + ' ) = <b>'
+    + ' ) = <b class="green">'
     + num_of_t6.toString() 
     + ' T6 + ' 
     + extra.toString()
     + '</b></p>';
-  if (num_of_t6 < 0){
-    document.getElementById("output2").innerHTML = '';
-    document.getElementById("output3").innerHTML = 
-        "I can't roll neggative dices for you";
-    return
+
+  if (num_of_t6 < 1){
+    num_of_t6 = 1;
+    extra = 0;
+    document.getElementById("output1").innerHTML +=
+        '<p class="green" > But you allways get at least one T6 </p>';
   }
 
   var dice_printout = '';
@@ -232,7 +230,7 @@ function roll(){
 </table>
 
 
-<div id="output3">
+<div id="output3" class="green">
 </div>
 
 <h2> Previous Results </h2>
