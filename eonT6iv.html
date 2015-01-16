@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-
 <meta charset="utf-8">
-
-
 <style>
-
 body {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     color: #FFFFFF;
@@ -15,8 +11,6 @@ body {
     background-color: #002040;
     text-shadow: #002040 0.1em 0.1em 0.2em
 }
-
-
 .dice {
     border: 1px solid #98bf21;
     padding: 3px 7px 2px 7px;
@@ -26,15 +20,12 @@ body {
     border-radius: 5px;
     text-shadow: none
 }
-
 .six {
     background-color: #FFFFFF; 
 }
-
 .green {
     color: #98bf21;
 }
-
 #output2 td {
     padding: 10px 5px;
 }
@@ -43,13 +34,11 @@ body {
     border-collapse: collapse;
     text-shadow: none
 }
-
 #previous td, #previous th {
     font-size: 1em;
     border: 1px solid #98bf21;
     padding: 3px 7px 2px 7px;
 }
-
 #previous th {
     font-size: 1.1em;
     text-align: left;
@@ -60,23 +49,18 @@ body {
     text-shadow: #8CAD28 0.1em 0.1em 0.2em
     color: #ffffff;
 }
-
 #previous tr.alt1 td {
     color: #000000;
     background-color: #EAF2D3;
     background-color: #E5F2BF;
 }
-
 #previous tr.alt2 td {
     color: #000000;
     background-color: #FFFFFF;
 }
 </style>
 
-
-
 <script>
-
 function display_dice(this_roll){
   return (
     ' <span class="dice">' 
@@ -84,19 +68,14 @@ function display_dice(this_roll){
     + '</span>'
   )
 };
-
 function display_6(){
   return ' <span class="dice six">6</span>'
 };
-
-
 function roll_one_t6(){
   return Math.floor(
     6 * Math.random() + 1
   );
 };
-
-
 function roll_print_start(rerolls){
   if (rerolls == 0){
     var roll_name = 'First roll:';
@@ -108,13 +87,9 @@ function roll_print_start(rerolls){
   };
   return '<tr><td>' + roll_name + '</td><td>';
 };
-    
-
 function roll_print_end(){
   return '</td></tr>'
 };
-
-
 function roll_with_ob(num_of_t6, rerolls, dice_printout){
   if (num_of_t6 == 0){
     //dice_printout += '</table>';
@@ -145,7 +120,6 @@ function roll_with_ob(num_of_t6, rerolls, dice_printout){
   total_sum += roll_with_ob(2*num_of_6, rerolls+1, dice_printout);
   return total_sum;
 };
-
 
 var previous_results = ''
 var previous_results_count = 0
@@ -188,11 +162,6 @@ function roll(){
     '<p>Total: <b>' 
     + total_sum.toString()
     +'</b></p>';
-
-  
-  document.getElementById("previous").innerHTML = 
-    '<tr><th>Roll</th><th>Result</th></tr>'
-    + previous_results;
  
     if (previous_results_count % 2){
       var row_class = ' class="alt1" '
@@ -211,12 +180,14 @@ function roll(){
     +'</td></tr>'
     + previous_results;
 
+  document.getElementById("previous").innerHTML = 
+    '<tr><th>Roll</th><th>Result</th></tr>'
+    + previous_results;
 };
-
 </script>
 </head>
+
 <body>
-<div id="outer">
 
 <table>
   <tr>
@@ -235,10 +206,8 @@ function roll(){
 <div id="output1">
 </div>
 
-
 <table id="output2">
 </table>
-
 
 <div id="output3" class="green">
 </div>
@@ -248,7 +217,6 @@ function roll(){
   <tr><th>Roll</th><th>Result</th></tr>
 </table>
 
-</div>
 </body>
 </html>
 
