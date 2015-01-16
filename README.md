@@ -21,7 +21,7 @@ As an example, if you enter:
 
 This will be recalculated:
 
-**( 3+2 ) T6 -1 = 4 T6 + 3**
+**( 3+2 ) T6 + ( -1 ) = 4 T6 + 3**
 
 This program will always do ob-rolles acoring to Eon rules. This means that if the outcome of a dice is 6, this will not be counted, but instead two new dices are rolled.
 
