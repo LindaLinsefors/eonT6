@@ -15,13 +15,13 @@ eonT6.html will always look the same, unless you edit it yourself.
 You can enter ether numbers or equations as "Number of T6" and "Extra". If your your "Extra" is less then 0 or more than 3, this program will re calculate the number of dices according to Eon rules.
 As an example, if you enter:
 
-|** Number of T6: ** | ** 3+2 **|
-|---                 | ---      |
-|** Extra: **        | ** -1 ** |
+|**Number of T6:** | **3+2**|
+|---               | ---    |
+|**Extra:**        | **-1** |
 
 This will be recalculated:
 
-** ( 3+2 ) T6 -1 = 4 T6 + 3 **
+**( 3+2 ) T6 -1 = 4 T6 + 3 **
 
 This program will always do ob-rolles acoring to Eon rules. This means that if the outcome of a dice is 6, this will not be counted, but instead two new dices are rolled.
 
