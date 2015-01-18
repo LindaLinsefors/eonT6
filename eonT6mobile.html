@@ -2,12 +2,18 @@
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width/(1.5), initial-scale=1.5">
 <style>
 body {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     background-color: #002040;
+}
+#input td{
+    padding: 5px 5px 5px 0px
+}
+input[type="number"] {
+   width:50px;
 }
 .dice {
     border: 1px solid #98bf21;
@@ -177,14 +183,14 @@ function roll(){
 
 <body>
 
-<table>
+<table id=input>
   <tr>
     <td>Number of T6:</tb>
-    <td><input type="number" size="6" value="2" id="t6"></tb>
+    <td><input type="number" value="2" id="t6"></tb>
   </tr>
   <tr>
     <td>Extra:</tb>
-    <td><input type="number" size="6" value="0" id="extra"></tb>
+    <td><input type="number" value="0" id="extra"></tb>
   </tr>
 </table>
 <p>
